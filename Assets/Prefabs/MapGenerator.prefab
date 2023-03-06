@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7322284617992031602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7322284617992031601}
+  - component: {fileID: 7322284617992031600}
+  - component: {fileID: 7322284617992031603}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7322284617992031601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322284617992031602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 46.51638, y: -16.709948, z: 51.87309}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7322284617992031600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322284617992031602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79214d44d229a4a8bf1164244ec6e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawMode: 2
+  mapWidth: 100
+  mapHeight: 100
+  noiseScale: 27.86
+  octaves: 18
+  persistance: 0.8
+  lacunarity: 1.2
+  seed: 22
+  offset: {x: 0, y: 0}
+  autoUpdate: 1
+  regions:
+  - name: Water Deep
+    height: 0.3
+    color: {r: 0.18378428, g: 0.4027594, b: 0.6603774, a: 0}
+  - name: Water Shallow
+    height: 0.4
+    color: {r: 0.31746176, g: 0.53453237, b: 0.7735849, a: 0}
+  - name: Sand
+    height: 0.45
+    color: {r: 0.7880206, g: 0.7924528, b: 0.48220006, a: 0}
+  - name: Grass
+    height: 0.55
+    color: {r: 0.26430655, g: 0.4716981, b: 0.18912424, a: 0}
+  - name: Grass 2
+    height: 0.6
+    color: {r: 0.17482467, g: 0.3490566, b: 0.11360805, a: 0}
+  - name: Rock
+    height: 0.7
+    color: {r: 0.3490566, g: 0.23417385, b: 0.17946778, a: 0}
+  - name: Rock2
+    height: 0.9
+    color: {r: 0.3018868, g: 0.14528216, b: 0.064079754, a: 0}
+  - name: Snow
+    height: 1
+    color: {r: 1, g: 0.9968553, b: 0.995283, a: 0}
+--- !u!114 &7322284617992031603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322284617992031602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8397bf24ae0cf8487d9ad6cc999f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureRenderer: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
