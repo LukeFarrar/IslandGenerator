@@ -35,6 +35,7 @@ public class MapGenerator : MonoBehaviour
     public bool autoUpdate;
 
     public TerrainType[] regions;
+    public LifeType[] life;
 
     float[,] falloffMap;
 
@@ -56,6 +57,7 @@ public class MapGenerator : MonoBehaviour
         }
         else if(drawMode == DrawMode.Mesh){
             display.DrawMesh(MeshGenerator.GenerateTerrainMesh(mapData.heightMap, meshHeightMultiplier, meshHeightCurve, EditorlevelOfDetail), TextureGenerator.TextureFromColourMap(mapData.colorMap,mapChunkSize,mapChunkSize));
+            display.DrawObjects(mapData, life, meshHeightMultiplier, meshHeightCurve);
         }
         else if(drawMode == DrawMode.FalloffMap){
             display.DrawTexture(TextureGenerator.TextureFromHeightMap(FalloffGenerator.GenerateFalloffMap(mapChunkSize)));
@@ -157,6 +159,15 @@ public struct TerrainType{
     public string name;
     public float height;
     public Color color;
+}
+
+[System.Serializable]
+public struct LifeType{
+    public string name;
+    public float minHeight;
+    public float maxHeight;
+    public int density;
+    public GameObject prefab;
 }
 
 public struct MapData{
